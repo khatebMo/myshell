@@ -1,0 +1,81 @@
+adnan-azem@AdnanAzem:~/Desktop/Advanced Programming/Ex1$ ./myshell
+hello: date >> myfile
+hello: cat myfile
+Mon Jan 22 07:20:11 PM IST 2024
+hello: date -u >> myfile
+hello: cat myfile
+Mon Jan 22 07:20:11 PM IST 2024
+Mon Jan 22 05:20:27 PM UTC 2024
+hello: wc -l < myfile
+2
+hello: if date | grep Fri
+then
+echo "Shabat Shalom"
+else
+echo "Hard way to go"
+fi
+Hard way to go
+hello: prompt = hi:   
+hi: mkdir mydir
+hi: cd mydir
+hi: pwd
+/home/adnan-azem/Desktop/Advanced Programming/Ex1/mydir
+hi: touch file1 file2 file3
+hi: ls
+file1  file2  file3
+hi: !!
+file1  file2  file3
+hi: echo abc xyz
+abc xyz 
+hi: ls
+file1  file2  file3
+hi: echo $?
+0
+hi: ls no_such_file
+ls: cannot access 'no_such_file': No such file or directory
+hi: echo $?
+512
+hi: ls no_such_file 2> file
+hi: cat file
+ls: cannot access 'no_such_file': No such file or directory
+hi: ^C
+You typed Control-C!
+hi: $person = David
+hi: echo person
+person 
+hi: echo $person
+David 
+hi: echo Enter a string
+Enter a string 
+hi: read name
+name = Adnan
+hi: echo $name
+Adnan 
+hi: cat > colors.txt
+blue
+black
+red
+red
+green
+blue
+green
+red
+red
+blue
+hi: cat colors.txt
+blue
+black
+red
+red
+green
+blue
+green
+red
+red
+blue
+hi: sort colors.txt | uniq -c | sort -r | head -3
+      4 red
+      3 blue
+      2 green
+hi: quit
+
